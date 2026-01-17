@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | The Prosper Plumber</title>
+    <meta name="description" content="Expert plumbing advice, maintenance tips, and local insights for homeowners in Prosper, Texas.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5B4BFF',
+                        secondary: '#EEF0FF',
+                        accent: '#00E5A8',
+                        dark: '#111827',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px rgba(0,0,0,0.08)',
+                        'glow': '0 0 20px rgba(91, 75, 255, 0.3)',
+                    },
+                    scale: {
+                        '102': '1.02',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .clip-path-slant { clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white/90 backdrop-blur-md fixed w-full top-0 z-50 shadow-sm transition-all duration-300">
+        <nav class="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-primary">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
+                    </svg>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-gray-900 group-hover:text-primary transition-colors">The Prosper Plumber</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html#services" class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Services</a>
+                <a href="index.html#features" class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Why Us</a>
+                <a href="index.html#testimonials" class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Reviews</a>
+                <a href="index.html#faq" class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">FAQ</a>
+                <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-button md:hidden p-2 text-gray-600 hover:text-primary transition-colors rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl">
+            <div class="flex flex-col p-4 space-y-4">
+                <a href="index.html#services" class="block py-2 px-4 hover:bg-secondary/50 rounded-lg text-gray-700 font-medium transition-colors">Services</a>
+                <a href="index.html#features" class="block py-2 px-4 hover:bg-secondary/50 rounded-lg text-gray-700 font-medium transition-colors">Why Us</a>
+                <a href="index.html#testimonials" class="block py-2 px-4 hover:bg-secondary/50 rounded-lg text-gray-700 font-medium transition-colors">Reviews</a>
+                <a href="index.html#faq" class="block py-2 px-4 hover:bg-secondary/50 rounded-lg text-gray-700 font-medium transition-colors">FAQ</a>
+                <a href="contact.html" class="block py-2 px-4 hover:bg-secondary/50 rounded-lg text-primary font-bold transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Header / Hero Section -->
+    <section class="relative bg-secondary pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden">
+        <!-- Abstract Decoration -->
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-white/40 skew-x-12 translate-x-20 blur-3xl rounded-full"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-x-10 translate-y-10"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+            <span class="text-primary font-bold tracking-wider uppercase text-sm mb-4 block animate-fade-in-up">Plumbing Insights</span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight mb-6">
+                Our Blog
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 font-medium leading-relaxed max-w-3xl mx-auto">
+                Expert insights, maintenance guides, and local plumbing tips designed for Prosper homeowners. We help you understand your home's systems so you can prevent costly repairs and maintain smooth operations year-round.
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Listing Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            
+            <!-- Featured Post -->
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+                    <span class="w-1.5 h-8 bg-primary rounded-full"></span>
+                    Latest Article
+                </h2>
+
+                <article class="bg-white p-8 md:p-10 rounded-2xl shadow-soft hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary/20 group relative overflow-hidden">
+                    <!-- Decorative background element -->
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-secondary rounded-bl-full -mr-8 -mt-8 opacity-50 group-hover:scale-110 transition-transform duration-500"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Emergency Tips</span>
+                            <div class="flex items-center gap-2 text-gray-500 text-sm font-medium">
+                                <i class="fa-regular fa-calendar"></i>
+                                <time datetime="2026-01-16">January 16, 2026</time>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 group-hover:text-primary transition-colors leading-tight">
+                            <a href="https://jb3147.github.io/prosper-plumbing-services-2026-01-16-0ork1/blog/7-critical-signs-your-prosper-home-needs-immediate.html">
+                                7 Critical Signs Your Prosper Home Needs Immediate Plumbing Attention
+                            </a>
+                        </h3>
+
+                        <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-8">
+                            Homeownership in Prosper, Texas brings unique challenges due to shifting clay soil and hard water. Don't ignore subtle warning signs that signal costly plumbing disasters. Watch for unexplained spikes in water bills, persistent low pressure, or slow drains indicating deep clogs. Discolored water or a noisy water heater require immediate attention to prevent flooding. Furthermore, foundation cracks and warm floor spots often reveal dangerous slab leaks, while gurgling toilets suggest compromised venting. Identifying these issues early saves thousands in repairs. If you spot these red flags, contact The Prosper Plumber immediately for a professional inspection to protect your home's value.
+                        </p>
+
+                        <a href="https://jb3147.github.io/prosper-plumbing-services-2026-01-16-0ork1/blog/7-critical-signs-your-prosper-home-needs-immediate.html" class="inline-flex items-center gap-2 bg-secondary hover:bg-primary text-primary hover:text-white font-bold rounded-lg px-6 py-3 transition-all duration-300">
+                            Read More <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Future Posts Placeholder Grid -->
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+                    <span class="w-1.5 h-8 bg-gray-200 rounded-full"></span>
+                    Coming Soon
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 opacity-60">
+                    <!-- Placeholder 1 -->
+                    <div class="bg-gray-50 border border-gray-100 p-8 rounded-2xl h-80 flex flex-col justify-center items-center text-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full mb-4 animate-pulse"></div>
+                        <div class="h-4 bg-gray-200 rounded w-3/4 mb-2 animate-pulse"></div>
+                        <div class="h-3 bg-gray-200 rounded w-1/2 animate-pulse"></div>
+                    </div>
+
+                    <!-- Placeholder 2 -->
+                    <div class="bg-gray-50 border border-gray-100 p-8 rounded-2xl h-80 flex flex-col justify-center items-center text-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full mb-4 animate-pulse"></div>
+                        <div class="h-4 bg-gray-200 rounded w-3/4 mb-2 animate-pulse"></div>
+                        <div class="h-3 bg-gray-200 rounded w-1/2 animate-pulse"></div>
+                    </div>
+
+                    <!-- Placeholder 3 -->
+                    <div class="bg-gray-50 border border-gray-100 p-8 rounded-2xl h-80 flex flex-col justify-center items-center text-center hidden lg:flex">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full mb-4 animate-pulse"></div>
+                        <div class="h-4 bg-gray-200 rounded w-3/4 mb-2 animate-pulse"></div>
+                        <div class="h-3 bg-gray-200 rounded w-1/2 animate-pulse"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand Info -->
+                <div class="space-y-4">
+                    <a href="#" class="flex items-center gap-2">
+                         <div class="bg-primary/10 p-2 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-primary">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold text-gray-900">The Prosper Plumber</span>
+                    </a>
+                    <p class="text-gray-500 text-sm leading-relaxed">
+                        Top-rated plumbing professionals serving Prosper, TX. We bring expertise, integrity, and speed to every job site.
+                    </p>
+                    <div class="flex gap-4 pt-2">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa-brands fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa-brands fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa-brands fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-4">
+                    <h3 class="font-bold text-gray-900">Contact Us</h3>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-primary"></i>
+                            <span>3820 First Street<br>Prosper, Texas 75078</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-primary"></i>
+                            <a href="tel:4694080308" class="hover:text-primary transition-colors">(469) 408-0308</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-primary"></i>
+                            <a href="mailto:best@plumber.com" class="hover:text-primary transition-colors">best@plumber.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="space-y-4">
+                    <h3 class="font-bold text-gray-900">Company</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="blog.html" class="hover:text-primary transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                 <!-- Legal Links -->
+                <div class="space-y-4">
+                    <h3 class="font-bold text-gray-900">Legal</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="privacy.html" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-100 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2025 The Prosper Plumber. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
